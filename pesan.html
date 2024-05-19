@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        section.pesan {
+            background-image: url(/img/bg-home.png);
+            background-position: center;
+            background-size: cover;
+        }
+        @media (max-width: 768px) {
+            section.pesan {
+                background-image: none;
+            }
+          }
+        @media (max-width: 1024px) {
+            section.pesan {
+                background-size: cover;
+                background-position: left;
+            }
+          }
+    </style>
+</head>
+<body>
+    <section class="pesan h-screen ">
+        <div class="container px-4 py-8  xl:pt-40 xl:pr-96 ">
+            <h2 class="text-3xl font-semibold mb-4 md:text-center">Form Pesan Mobil</h2>
+            <form class="max-w-lg mx-auto ">
+                <div class="mb-4">
+                    <label for="merk" class="block text-sm font-bold text-gray-700">Merk Mobil</label>
+                    <input type="text" id="merk" name="merk" class="mt-1 p-2 block w-full border rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="tanggal-sewa" class="block text-sm font-bold text-gray-700">Tanggal Sewa</label>
+                    <input type="date" id="tanggal-sewa" name="tanggal-sewa" class="mt-1 p-2 block w-full border rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="harga" class="block text-sm font-bold text-gray-700">Harga</label>
+                    <select id="harga" name="harga" class="mt-1 p-2 block w-full border rounded-md">
+                        <option value="200000">200.000 (12jam) </option>
+                        <option value="300000">300.000 (18jam)</option>
+                        <option value="500000">500.000 (24jam)</option>
+                        <option value="700000">700.000 (36jam)</option>
+                        <option value="1000000">1.000.000 (48jam)</option>
+                        <option value="2000000">2.000.000 (60jam)</option>
+                    </select>
+                </div>
+                <button type="submit" class="px-6 py-3 w-full mb-4 bg-teal-800 text-white rounded-lg shadow-lg hover:bg-black">Kirim Pesanan</button>
+                <button type="submit" class="px-6 py-3 w-full bg-teal-800 text-white rounded-lg shadow-lg hover:bg-black"> <a href="index.html">Kembali</a></button>
+            </form>
+        </div>
+    </section>
+        
+        
+        
+</body>
+</html>

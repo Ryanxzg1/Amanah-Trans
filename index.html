@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanah Trans</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      section.home {
+        background-image: url(/img/bg-home.png);
+        background-position: center;
+        background-size: cover;
+      }
+      @media (max-width: 768px) {
+        section.home {
+          background-image: none;
+        }
+      }
+      @media (max-width: 1024px) {
+        section.home {
+          background-image: none;
+        }
+      }
+      section.about {
+        background-image: url(/img/bg-about.png);
+        background-position: center;
+        background-size: cover;
+      }
+      @media (min-width: 1024px) {
+        section.about {
+          background-image: url(/img/bg-about-tablet.png);
+          background-position: center;
+          background-size: cover;
+        }
+        .info {
+          display: none;
+        }
+        .katalog-tambahan2 {
+          display: none;
+        }
+        .katalog-tambahan3 {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        section.about {
+         background-image: none;
+        }
+        .info {
+          display: none;
+        }
+
+      }
+      @media (min-width: 1280px) {
+        .katalog-tambahan1 {
+          height: 50dvh;
+        }
+        .katalog-tambahan2 {
+          display: none;
+        }
+        .katalog-tambahan3 {
+          display: none;
+        }
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      
+    </style>
+</head>
+<body>
+  
+  <!-- Home Awal -->
+  <section id="home" class=" flex items-center justify-center home bg-gray-300 py-10" >
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-teal-800 font-bold text-2xl">Amanah Trans</a>
+          </div>
+    
+          <!-- Menu (visible on large screens) -->
+          <div class="hidden sm:flex md:flex ">
+            <a href="#home" class="text-black px-6 py-2 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-black duration-300">Home</a>
+            <a href="#about" class="text-black px-6 py-2 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-black duration-300">About</a>
+            <a href="#menu" class="text-black px-6 py-2 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-black duration-300">Menu</a>
+            <a href="#contact" class="text-black px-6 py-2 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-black duration-300">Contact</a>
+            <a href="sign-up.html" class="text-black px-6 py-2 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-black duration-300">Sign-Up</a>
+            <a href="sign-in.html" class="text-white bg-teal-800 px-6 py-2 ml-4 rounded-md text-sm font-medium hover:text-white ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-slate-500 duration-300">Sign-In</a>
+          </div>
+    
+          <!-- Hamburger button (visible on small screens) -->
+          <div class="flex sm:hidden">
+            <button id="hamburger-btn" class="text-black px-2 py-2 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+  
+    <!-- Responsive Menu (hidden by default) -->
+    <div id="responsive-menu" class="hidden fixed right-0 top-16 h-full w-40 sm:hidden z-10 ">
+      <div class="bg-gray-800 text-white left-0 h-full">
+        <a href="#home" class="block px-4 py-2 hover:text-gray-950 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-100 hover:bg-white duration-300">Home</a>
+        <a href="#about" class="block px-4 py-2 hover:text-gray-950 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-white duration-300">About</a>
+        <a href="#menu" class="block px-4 py-2 hover:text-gray-950 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-white duration-300">Menu</a>
+        <a href="#contact" class="block px-4 py-2 hover:text-gray-950 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-white duration-300">Contact</a>
+      </div>
+    </div>
+  
+    <!-- Home -->
+    <main class="h-screen container px-4 py-8 md:mr-24 md:mb-16">
+    <div class="max-w-lg text-left mt-20 overflow-hidden" id="scrollText">
+        <h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-4">Selamat Datang di Web <span class="text-teal-800"> Amanah Trans</span></h2>
+        <p class="md:text-sm lg:text-xl text-black text-justify">Selamat datang di Amanah Trans, tempat di mana setiap perjalanan menjadi pengalaman yang berharga. Kami tidak hanya menyediakan layanan transportasi, tetapi juga memastikan bahwa setiap langkah perjalanan Anda dipenuhi dengan keamanan, kenyamanan, dan layanan yang berkualitas.</p>
+        <a href="#about" class="inline-block mt-4 px-6 py-3 bg-teal-800 text-white rounded-lg shadow-lg hover:-translate-y-1 hover:scale-100 hover:bg-gray-800 duration-300">Jelajahi Layanan Kami</a>
+    </div>
+</main>
+
+  
+  </section>
+  
+  <!-- Home Akhir -->
+  <!-- About -->
+  <section id="about" class="bg-gray-100 py-16 h-screen about">
+    <div class="container px-4 mx-auto">
+        <h2 class="text-3xl sm:text-3xl font-bold text-center">Tentang Perusahaan</h2>
+        <h2 class="text-3xl sm:text-3xl font-bold text-center  text-teal-800">Amanah Trans</h2>
+        <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between mt-8">
+            <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
+                <!-- <img src="" alt="Amanah Trans" class="w-full h-auto rounded-lg shadow-lg"> -->
+            </div>
+            <div class="w-full sm:w-1/2 ">
+                <p class="text-base lg:text-xl text-black leading-relaxed text-justify mt-10">Perusahaan Rental Amanah Trans adalah penyedia layanan transportasi terkemuka yang berkomitmen untuk memberikan pengalaman perjalanan yang aman, nyaman, dan terpercaya bagi pelanggan kami. Dengan armada kendaraan yang terawat dengan baik dan layanan pelanggan yang ramah, kami hadir untuk memenuhi kebutuhan perjalanan Anda.</p>
+                <p class="text-2xl text-white leading-relaxed text-justify mt-16 ml-36 info">Nama : <span> Amanah Trans</span></p>
+                <p class="text-2xl text-white leading-relaxed text-justify mt-5 ml-36 info">Alamat : Wonosari,Senden,Ngawen,Klaten</p>
+                <p class="text-2xl text-white leading-relaxed text-justify mt-5 ml-36 info">No Hp : +62 838 0583 3938</p>
+                <p class="text-2xl text-white leading-relaxed text-justify mt-5 ml-36 info">Sosial Media : 
+                  <a href="https://www.instagram.com/ryan_bmk08/">
+                  <ion-icon class="mr-2 hover:text-black" name="logo-instagram"></ion-icon> 
+                </a> 
+                  <a href="https://web.facebook.com/fadhil.alamsyah.9883">
+                  <ion-icon class="mr-2 hover:text-black" name="logo-facebook"></ion-icon> 
+                </a> 
+                  <a href="https://wa.me/6283805933938">
+                  <ion-icon class="mr-2 hover:text-black" name="logo-whatsapp"></ion-icon> 
+                </a> 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Katalog -->
+  <section id="menu" class="bg-teal-800 py-20 h-screen">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          BEST RENTAL 
+        </h2>
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          PRODUCT
+        </h2>
+        <p class="mt-4 text-lg text-white">
+          Selamat datang di Best Rental Produk Kami! Kami senang sekali menyambut Anda di platform kami. Telusuri Mobil unggulan kami dan temukan kenyamanan dan kualitas yang luar biasa.
+        </p>
+      </div>
+      <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 text-center">
+        <!-- Mobil 1 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 mb-8 rounded-3xl shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/avanza.png" class="w-56 h-auto md:w-auto lg:w-auto mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Toyota Avanza</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal1" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+        <!-- Mobil 2 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 rounded-3xl mb-8 shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/city.png" class="w-56 h-auto md:w-64 lg:w-full mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Honda City</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal2" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+        <!-- Mobil 3 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 rounded-3xl mb-8 shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/fortuner.png" class="w-56 h-auto md:w-64 lg:w-full mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Fortuner</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal3" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+        <!-- Mobil 4 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 rounded-3xl mb-8 shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/inova.png" class="w-56 h-auto md:w-64 lg:w-full mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Kijang Inova</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal4" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+        <!-- Mobil 5 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 rounded-3xl mb-8 shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/pajero.png" class="w-56 h-auto md:w-64 lg:w-full mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Pajero Sport</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal5" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+        <!-- Mobil 6 -->
+        <div class="bg-teal-900 pl-12 pr-12 pb-12 rounded-3xl mb-8 shadow-xl hover:shadow-gray-800 md:shadow-2xl sm:shadow-xl md:shadow-gray-800">
+          <img src="/img/xenia.png" class="w-56 h-auto md:w-64 lg:w-full mx-auto" alt="">
+          <!-- Gambar akan memiliki lebar 32 unit pada layar kecil, 64 unit pada layar medium, dan lebar penuh pada layar besar -->
+          <h3 class="text-2xl font-semibold text-white">Xenia</h3>
+          <!-- Button untuk membuka modal -->
+          <button id="show-modal6" @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300">Info</button>
+          <button @click="openModal = true" class="px-4 py-2 mt-4 rounded bg-teal-500 text-white hover:text-gray-950 transition ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-gray-500 duration-300"><a href="pesan.html">Pesan</a></button>
+      </div>
+
+          <!-- Modal 1-->
+          <div id="pop-up1" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Toyota Avanza</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin: 1.300cc</p>
+                        <p class="text-base">Kapasitas: 7 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal1" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal 2 -->
+          <div id="pop-up2" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Honda City</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin: 1.500cc</p>
+                        <p class="text-base">Kapasitas: 5 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal2" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal 3 -->
+          <div id="pop-up3" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Fortuner</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin : 2.700cc (bensin) / 2.800cc (diesel)</p>
+                        <p class="text-base">Kapasitas: 7 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal3" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal 4 -->
+          <div id="pop-up4" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Kijang Inova</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin: 2.000cc (Bensin) & 2.400cc (Diesel)</p>
+                        <p class="text-base">Kapasitas: 7 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal4" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal 5 -->
+          <div id="pop-up5" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Pajero Sport</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin: 2.400cc (Diesel)</p>
+                        <p class="text-base">Kapasitas: 7 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal5" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal 6 -->
+          <div id="pop-up6" class="hidden">
+
+            <div x-show="openModal" @click.away="openModal = false" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto ">
+              <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div id="katalog" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+              <div id="katalog" class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-headline">Xenia</h3>
+                      <div class="mt-2">
+                        <p class="text-base">
+                          Spesifikasi
+                        </p>
+                        <p class="text-base">Mesin: 1.500cc</p>
+                        <p class="text-base">Kapasitas: 7 orang</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                  <button id="close-modal6" @click="openModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </div>
+  </section>
+  <section class="h-screen bg-teal-800 katalog-tambahan1"></section>
+  <section class="h-screen bg-teal-800 katalog-tambahan2"></section>
+  <section class="h-screen bg-teal-800 katalog-tambahan3"></section>
+  
+  <!-- Form Contact -->
+  <section id="contact" class="h-screen py-2 bg-gray-200">
+    <form class="pt-6" action="" name="form-amanah-trans" >
+      <div class="max-w-md mx-auto bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb- mt-10">
+        <h2 class="text-2xl text-center font-bold mb-4">Hubungi Kami</h2>
+        <div class="mb-4">
+          <label class="block text-black text-sm font-bold mb-2" for="nama">
+            Nama
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama" name="nama" type="text" placeholder="Masukkan Nama">
+        </div>
+        <div class="mb-4">
+          <label class="block text-black text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="Masukkan Email">
+        </div>
+        <div class="mb-4">
+          <label class="block text-black text-sm font-bold mb-2" for="telepon">
+            No Telepon
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telepon" name="telepon" type="tel" placeholder="Masukkan No Telepon">
+        </div>
+        <div class="mb-4">
+          <label class="block text-black text-sm font-bold mb-2" for="pesan">
+            Pesan
+          </label>
+          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="pesan" name="pesan" placeholder="Tulis Pesan Anda"></textarea>
+        </div>
+    <div class="flex items-center justify-between">
+      <button id="kirimButton" class="bg-teal-800 hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onclick="loadingAnimation()">
+        <span id="buttonText">Kirim Pesan</span>
+        <span id="loadingSpinner" class="hidden animate-spin ml-2 h-5 w-5 mr-3" viewBox="0 0 24 24">.</span>
+      </button>
+      
+    </div>
+  </div>
+</form>
+</section>
+    
+    <!-- footer -->
+    <footer class="bg-teal-800 text-white py-6">
+      <div class="container mx-auto px-6">
+        <div class="md:flex md:items-center md:justify-between">
+          <!-- Bagian kiri footer -->
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-2">Hubungi Kami</h3>
+            <p class="text-white">Wonosari,Senden,Ngawen,Klaten</p>
+            <p class="text-white">Kota Klaten,Jawa Tengah, Indonesia</p>
+            <p class="text-white">Telp: +62-838-0593-3938</p>
+            <p class="text-white">Email: husyenrafi@gmail.com</p>
+          </div>
+    
+          <!-- Bagian tengah footer -->
+          <div class="md:flex-1 md:flex md:justify-center md:items-center">
+            <ul class="md:flex space-y-4 md:space-y-0 md:space-x-8">
+              <li><a href="#home" class="text-white hover:text-black">Home</a></li>
+              <li><a href="#about" class="text-white hover:text-black">About</a></li>
+              <li><a href="#menu" class="text-white hover:text-black">Menu</a></li>
+              <li><a href="#contact" class="text-white hover:text-black">Contact</a></li>
+            </ul>
+          </div>
+    
+          <!-- Bagian kanan footer -->
+          <div>
+            <h3 class="text-xl font-bold mb-2">Ikuti Kami</h3>
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/ryan_bmk08/">
+                <ion-icon class="mr-2 hover:text-black" name="logo-instagram"></ion-icon> 
+              </a> 
+              <a href="https://web.facebook.com/fadhil.alamsyah.9883">
+                <ion-icon class="mr-2 hover:text-black" name="logo-facebook"></ion-icon> 
+              </a> 
+                <a href="https://wa.me/6283805933938">
+                <ion-icon class="mr-2 hover:text-black" name="logo-whatsapp"></ion-icon> 
+              </a> 
+              
+            </div>
+          </div>
+        </div>
+        <div class="text-center mx-auto mt-8">
+          <p class="text-white">&copy; 2024 Amanah Trans. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+     
+  <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzAzZ58BPRLxmLnz_58bva2QbP-RrT12-S0xP8JLjMkDKKBxW2jSrKlcvsgXROxrvJf/exec'
+      const form = document.forms['form-amanah-trans']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+
+      function loadingAnimation() {
+        var button = document.getElementById('kirimButton');
+        var buttonText = document.getElementById('buttonText');
+        var loadingSpinner = document.getElementById('loadingSpinner');
+        
+        button.disabled = true; // Menonaktifkan tombol selama loading
+        
+        // Menampilkan animasi loading dan menyembunyikan teks tombol
+        buttonText.style.display = 'none';
+        loadingSpinner.style.display = 'inline-block';
+        
+        // Simulasi delay loading (Anda dapat menghapus ini dan menambahkan logika sesuai dengan kebutuhan Anda)
+        setTimeout(function() {
+          // Mengembalikan teks tombol dan menyembunyikan animasi loading
+          buttonText.style.display = 'inline-block';
+          loadingSpinner.style.display = 'none';
+          
+          button.disabled = false; // Mengaktifkan tombol kembali setelah loading selesai
+        }, 2000); // 2000 milliseconds = 2 seconds, ganti angka ini sesuai kebutuhan
+      }
+      
+  </script>
+  
+  <script>
+    // Toggle responsive menu
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+      var menu = document.getElementById('responsive-menu');
+      menu.classList.toggle('hidden');
+    });
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 0) {
+        navbar.classList.add('bg-white'); // Change background color when scrolled
+      } else {
+        navbar.classList.remove('bg-white'); // Revert back to original background color
+      }
+    });
+    // Modal 
+    var show_modal_1 = document.getElementById('show-modal1')
+    var show_modal_2 = document.getElementById('show-modal2')
+    var show_modal_3 = document.getElementById('show-modal3')
+    var show_modal_4 = document.getElementById('show-modal4')
+    var show_modal_5 = document.getElementById('show-modal5')
+    var show_modal_6 = document.getElementById('show-modal6')
+
+    var close_modal_1 = document.getElementById('close-modal1')
+    var close_modal_2 = document.getElementById('close-modal2')
+    var close_modal_3 = document.getElementById('close-modal3')
+    var close_modal_4 = document.getElementById('close-modal4')
+    var close_modal_5 = document.getElementById('close-modal5')
+    var close_modal_6 = document.getElementById('close-modal6')
+
+    var pop_up_1 = document.getElementById('pop-up1'); 
+    var pop_up_2 = document.getElementById('pop-up2'); 
+    var pop_up_3 = document.getElementById('pop-up3'); 
+    var pop_up_4 = document.getElementById('pop-up4'); 
+    var pop_up_5 = document.getElementById('pop-up5'); 
+    var pop_up_6 = document.getElementById('pop-up6'); 
+
+    show_modal_1.addEventListener('click', function(){
+      pop_up_1.classList.remove('hidden')
+    });
+    close_modal_1.addEventListener('click', function(){
+      pop_up_1.classList.add('hidden')
+    });
+
+    show_modal_2.addEventListener('click', function(){
+      pop_up_2.classList.remove('hidden')
+    });
+    close_modal_2.addEventListener('click', function(){
+      pop_up_2.classList.add('hidden')
+    });
+    
+    show_modal_3.addEventListener('click', function(){
+      pop_up_3.classList.remove('hidden')
+    });
+    close_modal_3.addEventListener('click', function(){
+      pop_up_3.classList.add('hidden')
+    });
+    
+    show_modal_4.addEventListener('click', function(){
+      pop_up_4.classList.remove('hidden')
+    });
+    close_modal_4.addEventListener('click', function(){
+      pop_up_4.classList.add('hidden')
+    });
+    
+    show_modal_5.addEventListener('click', function(){
+      pop_up_5.classList.remove('hidden')
+    });
+    close_modal_5.addEventListener('click', function(){
+      pop_up_5.classList.add('hidden')
+    });
+    
+    show_modal_6.addEventListener('click', function(){
+      pop_up_6.classList.remove('hidden')
+    });
+    close_modal_6.addEventListener('click', function(){
+      pop_up_6.classList.add('hidden')
+    });
+    
+    
+    // Modal 2
+
+     // background image
+     window.onload = function() {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isTablet = /iPad|Android/i.test(navigator.userAgent);
+      const mainContainer = document.querySelector('section.home');
+
+      if (isMobile || isTablet) {
+          mainContainer.classList.add('bg-none')
+      }
+    }
+    const scrollText = document.getElementById('scrollText');
+
+  function scrollLeft() {
+    const scrollWidth = scrollText.scrollWidth;
+    const clientWidth = scrollText.clientWidth;
+
+    if (scrollWidth > clientWidth) {
+      const scrollInterval = setInterval(() => {
+        if (scrollText.scrollLeft < scrollWidth) {
+         scrollText.scrollLeft += 1;
+       } else {
+          clearInterval(scrollInterval);
+          scrollText.scrollLeft = 0; // Reset to initial position
+        }
+     }, 20);
+    }
+  }
+
+// Panggil fungsi scrollLeft() ketika halaman di-scroll
+window.addEventListener('scroll', scrollLeft);
+
+  </script>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

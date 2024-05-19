@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        section.login {
+            background-image: url(/img/bg-login.png);
+            background-position: center;
+            background-size: cover;
+        }
+        @media (max-width: 768px) {
+            section.login {
+                background-size: cover;
+                background-position: left;
+            }
+          }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- form login -->
+    <section class="login">
+        <div class="absolute top-0 left-0 mt-4 ml-4">
+            <button class="bg-teal-800 text-white py-2 px-4 rounded hover:bg-black"><a href="index.html">Back</a></button>
+        </div>
+        <main class="container px-4 py-8 h-screen ">
+            <div class="max-w-lg md:pt-20 md:pl-14 pt-10 flex flex-col md:flex-row">
+                <div class="xl:w-3/4 w-3/4 mx-auto md:w-1/2 md:ml-10">
+                    <h2 class="text-3xl font-bold mb-4">Sign Up</h2>
+                    <form class="">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-bold text-gray-700">Nama</label>
+                            <input type="text" placeholder="Masukkan Nama" id="name" name="name" class="mt-1 p-2 block w-full border rounded-md">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-bold text-gray-700">Email</label>
+                            <input type="email" placeholder="Masukkan Email" id="email" name="email" class="mt-1 p-2 block w-full border rounded-md">
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="block text-sm font-bold text-gray-700">Kata Sandi</label>
+                            <input type="password" placeholder="Masukkan Password" id="password" name="password" class="mt-1 p-2 block w-full border rounded-md">
+                        </div>
+                        <button type="submit" class="px-6 py-3 mb-5 w-full bg-teal-800 text-white rounded-lg shadow-lg hover:bg-blue-600">Sign Up</button>
+                        <button type="submit" class="px-6 py-3 w-full  text-black rounded-lg shadow-lg hover:bg-blue-600">Sign up with google</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+    </section>
+    
+    </body>
+    </html>
